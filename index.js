@@ -126,11 +126,11 @@ async function starts() {
 					Iv: '❌ Link inválido ❌'
 				},
 				only: {
-					group: '❌ Este comando só pode ser usado em grupos! ❌',
-					ownerG: '❌ Este comando só pode ser usado pelo dono do grupo! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo meu dono! ❌',
-					admin: '❌ Você não é adm! ❌',
-					Badmin: '❌ Preciso ser adm! ❌'
+					group: '-> Este comando só pode ser usado em grupos! ',
+					ownerG: '-> Este comando só pode ser usado pelo dono do grupo! ',
+					ownerB: '-> Este comando só pode ser usado pelo meu dono! ',
+					admin: '-> Você não é adm! ',
+					Badmin: '-> Preciso ser adm! '
 				}
 			}
 
@@ -175,7 +175,7 @@ async function starts() {
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'WABot'; if (!author) author = 'CanibalBot';	
+				if (!packname) packname = 'CanibalBot'; if (!author) author = '557499260572';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -248,7 +248,7 @@ async function starts() {
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('MayBOT', authorname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('CanibalBot', authorname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(mess.error.stick)
 									thoth.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -275,7 +275,7 @@ async function starts() {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`❌ Falha no momento da conversão ${tipe} para stiker`)
+								reply(`❌ Falha no momento da conversão ${tipe} para sticker❌`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -356,7 +356,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('MayBOT', 'Thoth')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('CanibalBot', 'Sherek')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 reply(ptbr.stick())
 })
@@ -452,7 +452,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 buff = await thoth.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-thoth.sendMessage(_.jid, buff, image, {caption: `[Thoth falando]\n\n${body.slice(4)}`})
+thoth.sendMessage(_.jid, buff, image, {caption: `[Sherek falando]\n\n${body.slice(4)}`})
 }
 reply('Feito')
 } else {
@@ -602,7 +602,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply('❌ Só sticker sem movimento ❌')
 buffer = fs.readFileSync(ran)
-thoth.sendMessage(from, buffer, image, {quoted: mek, caption: 'kkkkkkkkkkkkkk'})
+thoth.sendMessage(from, buffer, image, {quoted: mek, caption: 'O Sherek já comeu o seu cuzinho KKKKKKKK'})
 fs.unlinkSync(ran)
 })
 break
