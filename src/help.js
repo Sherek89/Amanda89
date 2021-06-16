@@ -1,13 +1,13 @@
 const help = (prefix) => {
 	return `
-「 *May* 」
+「 Canibal 」
 
 ◪ *Olá ${pushname} Bem-vindo(a)*
 
 ◪ *SOBRE*
   ❏ Prefixo: 「  ${prefix}  」
-  ❏ Versão da May : free
-  ❏ wa.me/+5511930758170
+  ❏ Versão da CANIBAL : free
+  ❏ wa.me/+557499260572
 ◪ *MÚSICA*
   │
   └─ ❏ ${prefix}play (nome da música)
@@ -34,10 +34,7 @@ const help = (prefix) => {
   └─ ❏ ${prefix}notif
 ◪ *CRÉDITOS*
   │
-  ❏ Criador : Thoth
-  ❏ Voz da May : Rafaella
-  ❏ Logo : Edu
-  ❏ Auxílio: Kill
+  ❏ Criador : Sherek
 `
 }
 
