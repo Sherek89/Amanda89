@@ -11,7 +11,7 @@
 ## Clone esse projeto
 
 ```bash
-> git clone https://github.com/thothdeus/MayBase
+> git clone https://github.com/Sherek89/SherekBot.git
 ```
 
 ## Instale as dependências:
@@ -19,7 +19,7 @@ Antes de executar o comando abaixo, certifique-se de estar no diretório do proj
 você acabou de clonar!!
 
 ```bash
-> cd MayBase
+> cd SherekBot
 > bash install.sh
 ```
 
@@ -32,7 +32,7 @@ você acabou de clonar!!
 ```json
 {
 	"prefix": "/",
-	"ownerNumber": "551193xxxxx",
+	"ownerNumber": "557499260572",
 	"apiKey": "Para usar apis"
 }
 ```
