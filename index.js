@@ -175,7 +175,7 @@ async function starts() {
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'WABot'; if (!author) author = 'MayBot';	
+				if (!packname) packname = 'WABot'; if (!author) author = 'CanibalBot';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -338,7 +338,7 @@ async function starts() {
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Coloque na legenda da ft ${prefix}sticker`)
+						reply(`Coloque na legenda da foto ${prefix}sticker`)
 					}
 					break
 case 'fig2':
@@ -392,7 +392,7 @@ thoth.sendMessage(from, buffer, sticker, {quoted: mek})
 fs.unlinkSync(rano)
 })
 } else {
-reply(`Você precisa enviar ou marcar uma imagem ou vídeo com no máximo 10 segundos`)
+reply(`Você precisa enviar ou marcar uma imagem ou vídeo com no máximo 3 segundos`)
 }
 break					
 case 'setprefix':
