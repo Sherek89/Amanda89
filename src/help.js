@@ -1,12 +1,12 @@
 const help = (prefix) => {
 	return `
-「 Canibal 」
+「 CanibalBot 」
 
 ◪ *Olá ${pushname} Bem-vindo(a)*
 
 ◪ *SOBRE*
   ❏ Prefixo: 「  ${prefix}  」
-  ❏ Versão da CANIBAL : free
+  ❏ Versão do Canibal : free
   ❏ wa.me/+557499260572
 ◪ *MÚSICA*
   │
