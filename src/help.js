@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-「 CanibalBot 」
+「 AmandaBot 」
 
 ◪ *Olá ${pushname} Bem-vindo(a)*
 
