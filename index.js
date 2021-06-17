@@ -107,7 +107,7 @@ async function starts() {
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
-			const apiKey = setting.apiKey // me chama whatsapp wa.me/11930758170
+			const apiKey = setting.apiKey // me chama whatsapp wa.me/7499260572
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('America/Sao_Paulo').format('DD/MM HH:mm:ss')
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
@@ -129,8 +129,8 @@ async function starts() {
 					group: '-> Este comando só pode ser usado em grupos! ',
 					ownerG: '-> Este comando só pode ser usado pelo dono do grupo! ',
 					ownerB: '-> Este comando só pode ser usado pelo meu dono! ',
-					admin: '-> Você não é adm! ',
-					Badmin: '-> Preciso ser adm! '
+					admin: '-> Você não é adm!  ',
+					Badmin: '-> Preciso ser adm! <- '
 				}
 			}
 
@@ -175,7 +175,7 @@ async function starts() {
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'CanibalBot'; if (!author) author = '557499260572';	
+				if (!packname) packname = 'AmandaBot'; if (!author) author = '557499260572';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -279,7 +279,7 @@ async function starts() {
 							})
 							.on('end', function () {
 								console.log('Finish')
-								exec(`webpmux -set exif ${addMetadata('MayBOT', authorname)} ${ran} -o ${ran}`, async (error) => {
+								exec(`webpmux -set exif ${addMetadata('AmandaBot', authorname)} ${ran} -o ${ran}`, async (error) => {
 									if (error) return reply(mess.error.stick)
 									thoth.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)
@@ -356,7 +356,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('CanibalBot', 'Sherek')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('AmandaBot', 'Sherek')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 reply(ptbr.stick())
 })
@@ -379,7 +379,7 @@ console.log(`Started : ${cmd}`)
 })
 .on('error', function (err) {
 console.log(`Error : ${err}`)
-exec(`webpmux -set exif ${addMetadata('MayBOT', 'Thoth')} ${rano} -o ${rano}`, async (error) => {
+exec(`webpmux -set exif ${addMetadata('AmandaBot', 'Sherek')} ${rano} -o ${rano}`, async (error) => {
 fs.unlinkSync(media)
 tipe = media.endsWith('.mp4') ? 'video' : 'gif'
 reply(`Falha na conversão de ${tipe} para sticker`)
