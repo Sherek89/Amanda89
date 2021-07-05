@@ -173,7 +173,7 @@ async function starts() {
 			if (authorname != undefined) { } else { authorname = groupName }	
 			
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'AmandaBot'; if (!author) author = '557499260572';	
+				if (!packname) packname = 'AmandaBot'; if (!author) author = 'AmandaBot';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -606,7 +606,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply(' Só sticker sem movimento ')
 buffer = fs.readFileSync(ran)
-sherek.sendMessage(from, buffer, image, {quoted: mek, caption: 'O Sherek quer foto da sua buceta, mande para ele\nwa.me/557499260572'})
+sherek.sendMessage(from, buffer, image, {quoted: mek, caption: 'Pronto'})
 fs.unlinkSync(ran)
 })
 break
